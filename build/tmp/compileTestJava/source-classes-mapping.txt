@@ -1,5 +1,5 @@
-test/NewTemplateTest.java
- test.NewTemplateTest
+page/MainPage.java
+ page.MainPage
 step/TemplateCreationStep.java
  step.TemplateCreationStep
 step/LoginStep.java
@@ -10,5 +10,5 @@ page/TemplateListPage.java
  page.TemplateListPage
 page/LoginPage.java
  page.LoginPage
-page/MainPage.java
- page.MainPage
+test/NewTemplateTest.java
+ test.NewTemplateTest

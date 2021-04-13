@@ -15,9 +15,6 @@ import step.TemplateCreationStep;
 public class NewTemplateTest {
     private WebDriver driver;
     private LoginStep loginStep;
-    private MainPage mainPage;
-    private TemplateListPage templateListPage;
-    private TemplateCreationStep templateCreationStep;
 
     @BeforeMethod
     public void start() {
@@ -31,12 +28,13 @@ public class NewTemplateTest {
     @Test
     public void NewTemplateTest() {
         MainPage mainPage = loginStep.enterLoginAndPassword("p_petrov", "12345678");
-        templateListPage = mainPage.pressTemplateListButton();
-        templateCreationStep = templateListPage.pressCreationButton();
+        TemplateListPage templateListPage = mainPage.pressTemplateListButton();
+        TemplateCreationStep templateCreationStep = templateListPage.pressCreationButton();
         templateListPage = templateCreationStep.setNewTemplateData("IstominPatternTest", "Описание описания",
                 "20 апреля 2021 г.", "27 апреля 2021 г.", "7", "1", "5", "7",
                 "Ну какой вопрос тебе задать?");
-        templateListPage.checkThatPageIsLoaded("Список шаблонов опросов");
+        templateListPage.checkThatPageIsLoaded("Список шаблонов опросов"); //проверка на то, что опрос создан
+        //страница со списком шаблонов открывается только в случае успешного создания шаблона
     }
 
     @AfterMethod
