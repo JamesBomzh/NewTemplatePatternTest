@@ -13,15 +13,12 @@ public class TemplateCreationStep {
         templateCreationPage = PageFactory.initElements(driver, TemplateCreationPage.class);
     }
 
-    public TemplateListPage setNewTemplateData(String name, String description, String startDate, String endDate,
-                                               String period, String answerStart, String answerEnd, String publish,
-                                               String questionText) {
+    public TemplateListPage setNewTemplateData(String name, String description, String period, String answerStart,
+                                               String answerEnd, String publish, String questionText) {
         templateCreationPage.enterTemplateName(name);
         templateCreationPage.turnSelfEsteemOn();
         templateCreationPage.choosePublType();
         templateCreationPage.enterDescription(description);
-        templateCreationPage.chooseStartDate(startDate);
-        templateCreationPage.chooseEndDate(endDate);
         templateCreationPage.enterPeriod(period);
         templateCreationPage.enterAnswerStart(answerStart);
         templateCreationPage.enterAnswerEnd(answerEnd);

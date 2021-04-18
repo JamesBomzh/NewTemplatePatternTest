@@ -11,7 +11,6 @@ public class MainPage {
 
     private WebDriver driver;
     private By hdr = By.xpath("//h1");
-    private By userName = By.className("pl-10");
 
     public MainPage(WebDriver driver) { this.driver = driver; }
 
